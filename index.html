@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Invitation</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="우리 결혼합니다!">
+    <meta property="og:description" content="소중한 분들을 초대합니다.">
+    <meta property="og:image" content="https://네아이디.github.io/저장소명/wedding-photo.jpg">
+    <meta property="og:url" content="https://네아이디.github.io/저장소명">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-section">
+            <div class="main-image-wrapper">
+                <img src="wedding-photo.jpg" alt="메인 이미지" class="main-image">
+            </div>
+            <h1 class="title-en">we're getting married!</h1>
+            <div class="vertical-line"></div>
+        </header>
+
+        <section class="large-image-section">
+            <img src="large-wedding-photo.jpg" alt="서브 메인" class="large-wedding-image">
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-grid">
+                <img src="img1.jpg" class="thumb"> <img src="img2.jpg" class="thumb"> <img src="img3.jpg" class="thumb">
+                <img src="img4.jpg" class="thumb"> <img src="img5.jpg" class="thumb"> <img src="img6.jpg" class="thumb">
+                <img src="img7.jpg" class="thumb"> <img src="img8.jpg" class="thumb"> <img src="img9.jpg" class="thumb">
+                <img src="img10.jpg" class="thumb"> <img src="img11.jpg" class="thumb"> <img src="img12.jpg" class="thumb">
+                <img src="img13.jpg" class="thumb"> <img src="img14.jpg" class="thumb"> <img src="img15.jpg" class="thumb">
+                <img src="img16.jpg" class="thumb"> <img src="img17.jpg" class="thumb"> <img src="img18.jpg" class="thumb">
+                <img src="img19.jpg" class="thumb"> <img src="img20.jpg" class="thumb"> <img src="img21.jpg" class="thumb">
+                <img src="img22.jpg" class="thumb"> <img src="img23.jpg" class="thumb"> <img src="img24.jpg" class="thumb">
+                <img src="img25.jpg" class="thumb"> <img src="img26.jpg" class="thumb"> <img src="img27.jpg" class="thumb">
+                <img src="img28.jpg" class="thumb"> <img src="img29.jpg" class="thumb"> <img src="img30.jpg" class="thumb">
+            </div>
+        </section>
+
+        <section class="rsvp-section">
+            <div class="rsvp-card">
+                <h2 class="rsvp-title">함께 참석해<br>축하해 주시겠습니까?</h2>
+                <div class="rsvp-icon">💌</div>
+                <button class="rsvp-button" id="openRsvpModal">참석하기</button>
+            </div>
+        </section>
+
+<section class="guestbook-section">
+            <div class="guestbook-container">
+                <div class="guestbook-title-img-wrapper">
+                    <img src="guestbook-title.jpg" alt="GUESTBOOK" class="guestbook-title-img">
+                </div>
+                <div class="guestbook-form">
+                    <div class="input-row"><input type="text" id="gbName" placeholder="성함"></div>
+                    <div class="input-row"><textarea id="gbMsg" placeholder="축하 메시지를 남겨주세요." rows="2"></textarea></div>
+                    <button id="submitGb" class="guestbook-submit-btn">등록하기</button>
+                </div>
+                <div id="guestbookList" class="guestbook-list"></div>
+                <button id="loadMoreGb" class="load-more-btn" style="display:none;">방명록 더보기 ▾</button>
+            </div>
+        </section>
+
+        <section class="account-section">
+            <div class="account-image-box">
+                <img src="account-title-bg.jpg" alt="마음 전하실 곳" class="account-bg-img">
+            </div>
+            
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header">신랑측 마음 전하실 곳 <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <div class="account-row">
+                            <div class="account-info">
+                                <span class="bank">국민은행</span>
+                                <span class="number">123-456789-01-011</span>
+                                <span class="name">신랑 000</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyText('123-456789-01-011')">복사</button>
+                        </div>
+                        <div class="account-row">
+                            <div class="account-info">
+                                <span class="bank">신한은행</span>
+                                <span class="number">987-654-321012</span>
+                                <span class="name">부친 000</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyText('987-654-321012')">복사</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">신부측 마음 전하실 곳 <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <div class="account-row">
+                            <div class="account-info">
+                                <span class="bank">우리은행</span>
+                                <span class="number">1002-123-456789</span>
+                                <span class="name">신부 000</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyText('1002-123-456789')">복사</button>
+                        </div>
+                        <div class="account-row">
+                            <div class="account-info">
+                                <span class="bank">카카오뱅크</span>
+                                <span class="number">3333-01-1234567</span>
+                                <span class="name">부친 000</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyText('3333-01-1234567')">복사</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="share-section">
+            <button class="share-button" onclick="sharePage()">청첩장 공유하기</button>
+        </section>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content-wrapper">
+            <button class="close-button" id="closeGallery">&times;</button>
+            <img class="modal-content" id="modalImage">
+            <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+            <button class="nav-btn next" id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <div id="rsvpModal" class="modal">
+        <div class="rsvp-form-card">
+            <button type="button" class="close-rsvp" id="closeRsvpBtn">&times;</button>
+            <h3 class="modal-title">참석 의사 전달</h3>
+            <div class="modal-input-group">
+                <input type="text" id="rsvpName" placeholder="성함">
+                <input type="number" id="rsvpCount" placeholder="본인 포함 총 인원">
+            </div>
+            <button id="submitRsvp" class="rsvp-button-submit">참석 의사 전달하기</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
